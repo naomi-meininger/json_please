@@ -138,15 +138,19 @@
                         margin-left: auto;
                         margin-right: auto;
                 }
+		#filt {
+		  float: right;
+		}
+		#results {
+		  float: right;
+		}
 
 
         </style>
         <h1>Songs!</h1>
         <form>
-                
-                <div id = "info">
-
-                </div>
+		<div id = "presentation"> 
+                <div id = "info"></div>
                 <select id = "menu">
                         <option>R&amp;B</option>
                         <option>Pop</option>
@@ -158,9 +162,10 @@
                         <option>Hip-Hop</option>
                         <option>Soul</option>
                 </select>
+		<br>
                 <input id = "filt" type = "button" value = "Filter"> </input>
                 <p id = "results"> </p>
-
+		</div>
 
         </form>
         <script>
