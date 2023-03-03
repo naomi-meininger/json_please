@@ -36,17 +36,16 @@
 
                                         fil = document.getElementById("filt");
                                         arr = obj["songs"];
-                                        // console.log("Here " + obj[0]);
-                                        // document.getElementById("info").innerHTML =returnHTML;
+                                      
                                         document.getElementById("info").innerHTML = "";
                                         for (let k = 0; k < arr.length; k++) {
                                                 document.getElementById("info").innerHTML += "<br>";
                                                 document.getElementById("info").innerHTML += "<br>";
 
-                                                // Adel isn't printing???
+                                            
                                                 document.getElementById("info").innerHTML += arr[k]["name"];
                                                 document.getElementById("info").innerHTML += "<br>";
-
+						document.getElementById("info").innerHTML += "Artist(s)";
                                                 art = arr[k]["artists"];
                                                 for (let l = 0; l < art.length; l++) {
                                                          document.getElementById("info").innerHTML += art[l];
@@ -56,7 +55,7 @@
                                                         
                                                 }
                                                 document.getElementById("info").innerHTML += "<br>";
-
+						document.getElementById("info").innerHTML += "Genres(s)";
                                                 gen = arr[k]["genres"];
                                                 for (let l = 0; l < gen.length; l++) {
                                                          document.getElementById("info").innerHTML += gen[l];
@@ -66,7 +65,7 @@
                                                        
                                                 }
                                                 document.getElementById("info").innerHTML += "<br>";
-
+						document.getElementById("info").innerHTML += "Released in";
                                                 document.getElementById("info").innerHTML += arr[k]["year"];
                                                 
 
