@@ -31,6 +31,7 @@
 					theData = request.responseText;
 					returnHTML = theData;
 					obj = JSON.parse(theData);
+                                        document.getElementById("part2").innerHTML = theData;
                                         console.log(obj);
 					
 
@@ -40,8 +41,11 @@
                                         document.getElementById("info").innerHTML = "";
                                         for (let k = 0; k < arr.length; k++) {
                                                 
-                                                document.getElementById("info").innerHTML += "<br>";
-                                                document.getElementById("info").innerHTML += "<br>";
+                                                if (k != 0) {
+                                                        document.getElementById("info").innerHTML += "<br>";
+                                                        document.getElementById("info").innerHTML += "<br>";
+                                                }
+                                               
                                                 document.getElementById("info").innerHTML += arr[k]["name"];
                                                 document.getElementById("info").innerHTML += "<br>";
 						document.getElementById("info").innerHTML += "Artist(s): ";
@@ -124,6 +128,12 @@
        
         <h1>Songs!</h1>
         <br>
+        <h2>Part 2</h2>
+        <div id = "part2"></div>
+
+        <h2>Part 3</h2>
+        <div id = "info"></div>
+        <h2>Part 4</h2>
         <form>
                 <div id = "presentation">
                 <select id = "menu">
@@ -138,10 +148,11 @@
                         <option>Soul</option>
                 </select>
                 
-                        <input id = "filt" type = "button" value = "Filter"> </input>
-                        <p id = "results"> </p>
+                <input id = "filt" type = "button" value = "Filter"> </input>
+                 <p id = "results"> </p>
                 </div>
-                <div id = "info"></div>
+              
+                
                 <br>
                 
 
@@ -160,11 +171,11 @@
                         width: 100%;
                 }
                 #presentation {
-                        float:right;
                         margin-right: 30%;
                 }
-                #info {
-                        margin-left:15%;
+                #results {
+                        float:right;
+                        margin-right: 30%;
                 }
 
 
