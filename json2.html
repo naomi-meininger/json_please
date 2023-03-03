@@ -45,7 +45,7 @@
                                             
                                                 document.getElementById("info").innerHTML += arr[k]["name"];
                                                 document.getElementById("info").innerHTML += "<br>";
-						document.getElementById("info").innerHTML += "Artist(s)";
+						document.getElementById("info").innerHTML += "Artist(s): ";
                                                 art = arr[k]["artists"];
                                                 for (let l = 0; l < art.length; l++) {
                                                          document.getElementById("info").innerHTML += art[l];
@@ -55,7 +55,7 @@
                                                         
                                                 }
                                                 document.getElementById("info").innerHTML += "<br>";
-						document.getElementById("info").innerHTML += "Genres(s)";
+						document.getElementById("info").innerHTML += "Genres(s): ";
                                                 gen = arr[k]["genres"];
                                                 for (let l = 0; l < gen.length; l++) {
                                                          document.getElementById("info").innerHTML += gen[l];
@@ -65,7 +65,7 @@
                                                        
                                                 }
                                                 document.getElementById("info").innerHTML += "<br>";
-						document.getElementById("info").innerHTML += "Released in";
+						document.getElementById("info").innerHTML += "Released in: ";
                                                 document.getElementById("info").innerHTML += arr[k]["year"];
                                                 
 
