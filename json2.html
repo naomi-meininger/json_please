@@ -39,10 +39,9 @@
                                       
                                         document.getElementById("info").innerHTML = "";
                                         for (let k = 0; k < arr.length; k++) {
+                                                
                                                 document.getElementById("info").innerHTML += "<br>";
                                                 document.getElementById("info").innerHTML += "<br>";
-
-                                            
                                                 document.getElementById("info").innerHTML += arr[k]["name"];
                                                 document.getElementById("info").innerHTML += "<br>";
 						document.getElementById("info").innerHTML += "Artist(s): ";
@@ -67,13 +66,11 @@
                                                 document.getElementById("info").innerHTML += "<br>";
 						document.getElementById("info").innerHTML += "Released in: ";
                                                 document.getElementById("info").innerHTML += arr[k]["year"];
-                                                
 
                                         }
 
 
                                         fil.addEventListener("click", function () {
-                                                // console.log(typeof obj[0]);
                                         selectElement = document.getElementById("menu");
                                        
 
@@ -124,33 +121,11 @@
 </head>
 
 <body onload = "loadMessages()">
-        <style>
-                h1 {
-                        text-align: center;
-                        margin-left: auto;
-                        margin-right: auto;
-                }
-                body {
-                        background-color: lightblue;
-                }
-/*                 input#results {
-                        text-align: center;
-                        margin-left: auto;
-                        margin-right: auto;
-                } */
-		#filt {
-		  float: right;
-		}
-		#results {
-		  float: right;
-		}
-
-
-        </style>
+       
         <h1>Songs!</h1>
+        <br>
         <form>
-		<div id = "presentation"> 
-                <div id = "info"></div>
+                <div id = "presentation">
                 <select id = "menu">
                         <option>R&amp;B</option>
                         <option>Pop</option>
@@ -162,12 +137,39 @@
                         <option>Hip-Hop</option>
                         <option>Soul</option>
                 </select>
-		<br>
-                <input id = "filt" type = "button" value = "Filter"> </input>
-                <p id = "results"> </p>
-		</div>
+                
+                        <input id = "filt" type = "button" value = "Filter"> </input>
+                        <p id = "results"> </p>
+                </div>
+                <div id = "info"></div>
+                <br>
+                
 
         </form>
+        <style>
+                h1 {
+                        text-align: center;
+                        margin-left: auto;
+                        margin-right: auto;
+                }
+                body {
+                        background-color: lightblue;
+                }
+		form {
+                        float: left;
+                        width: 100%;
+                }
+                #presentation {
+                        float:right;
+                        margin-right: 30%;
+                }
+                #info {
+                        margin-left:15%;
+                }
+
+
+
+        </style>
         <script>
         
 
@@ -204,6 +206,7 @@
 
         }
         </script>
+        
        
 </body>
 
